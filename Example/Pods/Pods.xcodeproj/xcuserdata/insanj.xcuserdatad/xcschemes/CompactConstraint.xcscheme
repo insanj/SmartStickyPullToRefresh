@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AF6FEB48688EDF19D9947822"
-               BuildableName = "Pods_SmartStickyPullToRefresh_Tests.framework"
-               BlueprintName = "Pods-SmartStickyPullToRefresh_Tests"
+               BlueprintIdentifier = "A2D93BC49DAC6CCC4E0127D8"
+               BuildableName = "CompactConstraint.framework"
+               BlueprintName = "CompactConstraint"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

@@ -1,5 +1,7 @@
 PODS:
-  - SmartStickyPullToRefresh (0.1.0)
+  - CompactConstraint (0.1.0)
+  - SmartStickyPullToRefresh (0.1):
+    - CompactConstraint
 
 DEPENDENCIES:
   - SmartStickyPullToRefresh (from `../`)
@@ -9,6 +11,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  SmartStickyPullToRefresh: e43188331bc64fcc285c43609120cda45d1eb203
+  CompactConstraint: 562187c821afcc510536a3df799a16c25bea3d9b
+  SmartStickyPullToRefresh: c66e0098980ea6f712eb772687c90191a501a7fc
 
 COCOAPODS: 0.38.2

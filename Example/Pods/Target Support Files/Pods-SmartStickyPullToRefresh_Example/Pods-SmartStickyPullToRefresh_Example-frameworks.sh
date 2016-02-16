@@ -52,8 +52,10 @@ code_sign_if_enabled() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework 'Pods-SmartStickyPullToRefresh_Example/CompactConstraint.framework'
   install_framework 'Pods-SmartStickyPullToRefresh_Example/SmartStickyPullToRefresh.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework 'Pods-SmartStickyPullToRefresh_Example/CompactConstraint.framework'
   install_framework 'Pods-SmartStickyPullToRefresh_Example/SmartStickyPullToRefresh.framework'
 fi

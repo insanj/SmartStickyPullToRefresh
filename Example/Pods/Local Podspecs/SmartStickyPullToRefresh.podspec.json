@@ -1,25 +1,29 @@
 {
   "name": "SmartStickyPullToRefresh",
-  "version": "0.1.0",
-  "summary": "A short description of SmartStickyPullToRefresh.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/SmartStickyPullToRefresh",
+  "version": "0.1",
+  "summary": "Smart, sticky pull to refresh control for any UIScrollView.",
+  "homepage": "https://github.com/insanj/SmartStickyPullToRefresh",
   "license": "MIT",
   "authors": {
-    "insanj": "insanj@gmail.com"
+    "insanj": "insanjmail@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/SmartStickyPullToRefresh.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/insanj/SmartStickyPullToRefresh.git",
+    "tag": "0.1"
   },
   "platforms": {
-    "ios": "7.0"
+    "ios": "9.0"
   },
   "requires_arc": true,
   "source_files": "Pod/Classes/**/*",
   "resource_bundles": {
     "SmartStickyPullToRefresh": [
       "Pod/Assets/*.png"
+    ]
+  },
+  "dependencies": {
+    "CompactConstraint": [
+
     ]
   }
 }

@@ -1,0 +1,6 @@
+framework module CompactConstraint {
+  umbrella header "CompactConstraint-umbrella.h"
+
+  export *
+  module * { export * }
+}

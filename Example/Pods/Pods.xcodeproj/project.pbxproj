@@ -7,97 +7,159 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1621BA8FFB967E651E50FC3D143F1B51 /* SmartStickyPullToRefresh-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DE21A3EBE5266771A7570A543D1A5F4 /* SmartStickyPullToRefresh-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		232593981C72E5BF0067EDE8 /* SmartStickyPullToRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 232593961C72E5BF0067EDE8 /* SmartStickyPullToRefresh.h */; };
-		232593991C72E5BF0067EDE8 /* SmartStickyPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 232593971C72E5BF0067EDE8 /* SmartStickyPullToRefresh.m */; };
-		37037BA9C821BA1C6FC55090D0DC4D63 /* SmartStickyPullToRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B77560D63D26512569B1F4C905F4FC37 /* SmartStickyPullToRefresh.bundle */; };
-		3C08C3D093B05F671EACF566E2215600 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFEB40A87F9580E9E66CBE566D54A2E /* Foundation.framework */; };
-		3E93B7E8CA13063E7236D56D647567F7 /* SmartStickyPullToRefresh-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA25D3348FC7FF6B6323DCBB4718232 /* SmartStickyPullToRefresh-dummy.m */; };
-		5987282B56AC6459589C3AADC18EACD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFEB40A87F9580E9E66CBE566D54A2E /* Foundation.framework */; };
-		75302FB8013CD15EE617D99575C0C882 /* Pods-SmartStickyPullToRefresh_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE8CCBCAD8FD2284F14450FC59D15E5F /* Pods-SmartStickyPullToRefresh_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7E3F1D8FB8C5B7D29B188AFDF22B95B0 /* Pods-SmartStickyPullToRefresh_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CD5490268FADECEA2BFC75E0CD1E9603 /* Pods-SmartStickyPullToRefresh_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F5AC54753CF8395E25D3CCD7ED901C0 /* Pods-SmartStickyPullToRefresh_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D667411291ECBA078FD1C06ADB1E0B /* Pods-SmartStickyPullToRefresh_Example-dummy.m */; };
-		B0E0D721CE74E1C320B350DF57EFABAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFEB40A87F9580E9E66CBE566D54A2E /* Foundation.framework */; };
-		D6656DFBF1A6701F019B3689E858A819 /* Pods-SmartStickyPullToRefresh_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD81F9A1D847E12CEA96234C5B5A2DEC /* Pods-SmartStickyPullToRefresh_Tests-dummy.m */; };
+		0289CA0D1A5F80D3AAD764FFB696842B /* Pods-SmartStickyPullToRefresh_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBA0218A18CA8D9CD814F143890E5FE /* Pods-SmartStickyPullToRefresh_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08BBE05B7EC4907BD07F32DCC50C2822 /* Pods-SmartStickyPullToRefresh_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0E0B108912B7918ADCB90FCA183F70 /* Pods-SmartStickyPullToRefresh_Tests-dummy.m */; };
+		0F6AAC8821640E1CFD1A169D3DF623BC /* CompactConstraint-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7F18263AC7B4EEF25AE9ECA7218785 /* CompactConstraint-dummy.m */; };
+		1120771F09F7074081B136A26D81B233 /* CompactConstraint-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 50A43C3026B13C21C2358A37D966DC49 /* CompactConstraint-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A3C08BB33BE0E8F383E50857BBDAB5F /* SmartStickyPullToRefresh-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C1A0DA4C43CE7CF6BDD69EC20ECE84 /* SmartStickyPullToRefresh-dummy.m */; };
+		38F56DE1C9F736C77F5B0A5484C48863 /* UIView+CompactConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = A7F21DBADB0D98CC7C3A978720494FBE /* UIView+CompactConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4567C9F173133991C64AC9A56409B117 /* Pods-SmartStickyPullToRefresh_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A2B14D3E55F5587849E05FD8525D310 /* Pods-SmartStickyPullToRefresh_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57E3CC11FCB9E08B9A8BA8BC3F61CD99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60A1AEA975DCF40C1CB3916438DE0CF /* Foundation.framework */; };
+		5896F7F2B0251BAC45B6AF864C453384 /* UIView+CompactConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4174E6B684BB4E27FD7BEE8B75603E9F /* UIView+CompactConstraint.m */; };
+		58CE823E98E1B479D8D488CD9E01E2D9 /* SmartStickyPullToRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B77560D63D26512569B1F4C905F4FC37 /* SmartStickyPullToRefresh.bundle */; };
+		794AEA01BF45316C42B0B16952971EE7 /* CompactConstraint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBC73F1B8AFD78F0AF7B53B174714F3 /* CompactConstraint.framework */; };
+		82E4C460FFD2938046B3D5256176920D /* SmartStickyPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2ECA07F0EAE6964BF80AA4977B8B0B /* SmartStickyPullToRefresh.m */; };
+		86CB02B571143EC87166AC735F5054D8 /* SmartStickyPullToRefresh-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B9FF7508D82B1EBBB95DA56FE4F55A83 /* SmartStickyPullToRefresh-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F85796B59E5A3763593E89FDA8E5697 /* NSLayoutConstraint+CompactConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D3AC8A40509EDAB2558AF3F311FE45 /* NSLayoutConstraint+CompactConstraint.m */; };
+		9B5157341C7E86D5FC006F798A9071F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60A1AEA975DCF40C1CB3916438DE0CF /* Foundation.framework */; };
+		A2F6EF2B84D6A512A6C0E2D6EB33FA2E /* CompactConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C872508F0728218C23EEA45C4DF2E35 /* CompactConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9D367EFF44F896D24D1C5DB5E429CD6 /* NSLayoutConstraint+CompactConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 85D2371158B4BEE6923795502B15A372 /* NSLayoutConstraint+CompactConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0E257406C028EAD9E9A8D2F21B351E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60A1AEA975DCF40C1CB3916438DE0CF /* Foundation.framework */; };
+		B1DE1EEF35EBAD4E58607D3C771C0AE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60A1AEA975DCF40C1CB3916438DE0CF /* Foundation.framework */; };
+		B21938CED47BF649CD8C08817C370A55 /* SmartStickyPullToRefreshDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AF918E2D7F2CA2E2C18A22E669478EA6 /* SmartStickyPullToRefreshDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3C159A995B874D7414532199ECABF33 /* SmartStickyPullToRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 81A52B6575829A6F9CB186548DC9F341 /* SmartStickyPullToRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3D1BD4EC3593AC0CED0221EF41D7903 /* Pods-SmartStickyPullToRefresh_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1385889677A29EA3F7118B0F8A1C7FA8 /* Pods-SmartStickyPullToRefresh_Example-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2587CB37B3E015EEE723CA55186B1E21 /* PBXContainerItemProxy */ = {
+		3B5DFC2CC49876F9486A03FAA346C172 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A310BCA0FF886FCFCC7AEED9C0F41E36;
+			remoteGlobalIDString = 4F727062FA0BC10AD28323C393693EC4;
 			remoteInfo = SmartStickyPullToRefresh;
 		};
-		DD1D07D7E9C0593885BD6551C09CAD61 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A310BCA0FF886FCFCC7AEED9C0F41E36;
-			remoteInfo = SmartStickyPullToRefresh;
-		};
-		E009F77379A4FA63C174E5C8F62D4314 /* PBXContainerItemProxy */ = {
+		57CEC7FF003E36FBB05DB360EF8E1C7D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9C3B11C98CFB5A49FEC841ACEA3B2ADE;
 			remoteInfo = "SmartStickyPullToRefresh-SmartStickyPullToRefresh";
 		};
+		5F738851945A6B68206EAE5234B38CCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F727062FA0BC10AD28323C393693EC4;
+			remoteInfo = SmartStickyPullToRefresh;
+		};
+		71C2B5A0CD98D4983454019ADC0DDFA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D946C1C01172C9C3E8247821AC549828;
+			remoteInfo = CompactConstraint;
+		};
+		AE49825E3A0666DAF44221713AC4707E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D946C1C01172C9C3E8247821AC549828;
+			remoteInfo = CompactConstraint;
+		};
+		EE75960040214DA366B3EE91F8BDDE73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D946C1C01172C9C3E8247821AC549828;
+			remoteInfo = CompactConstraint;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0180DAF98FFA8A1216F811FFD9A8F1A0 /* SmartStickyPullToRefresh.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SmartStickyPullToRefresh.xcconfig; sourceTree = "<group>"; };
 		02AA4DBE14BABD9CDE06FE55FECDDFC1 /* Pods-SmartStickyPullToRefresh_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SmartStickyPullToRefresh_Example.modulemap"; sourceTree = "<group>"; };
-		1A705D189EBD925E6F125A10DDDA07C4 /* Pods-SmartStickyPullToRefresh_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartStickyPullToRefresh_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		0A2B14D3E55F5587849E05FD8525D310 /* Pods-SmartStickyPullToRefresh_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SmartStickyPullToRefresh_Tests-umbrella.h"; sourceTree = "<group>"; };
+		1385889677A29EA3F7118B0F8A1C7FA8 /* Pods-SmartStickyPullToRefresh_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SmartStickyPullToRefresh_Example-dummy.m"; sourceTree = "<group>"; };
+		1A2ECA07F0EAE6964BF80AA4977B8B0B /* SmartStickyPullToRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SmartStickyPullToRefresh.m; sourceTree = "<group>"; };
 		21A438A58AE076B64AFCC4518F7BAB5F /* SmartStickyPullToRefresh.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SmartStickyPullToRefresh.modulemap; sourceTree = "<group>"; };
-		232593961C72E5BF0067EDE8 /* SmartStickyPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartStickyPullToRefresh.h; sourceTree = "<group>"; };
-		232593971C72E5BF0067EDE8 /* SmartStickyPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartStickyPullToRefresh.m; sourceTree = "<group>"; };
-		2325939A1C72E5E70067EDE8 /* SmartStickyPullToRefreshDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmartStickyPullToRefreshDelegate.h; sourceTree = "<group>"; };
-		2DE21A3EBE5266771A7570A543D1A5F4 /* SmartStickyPullToRefresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmartStickyPullToRefresh-umbrella.h"; sourceTree = "<group>"; };
-		32DB0BE677B876EA1E2FA9F627632119 /* Pods-SmartStickyPullToRefresh_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartStickyPullToRefresh_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		336A61931F1A3BB19A356EC81F295617 /* Pods-SmartStickyPullToRefresh_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SmartStickyPullToRefresh_Tests.modulemap"; sourceTree = "<group>"; };
 		346406BCBC59AE62CC8BF958ED3EB318 /* Pods-SmartStickyPullToRefresh_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SmartStickyPullToRefresh_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		34679CBFF5FB083D7798E2950A90A35C /* CompactConstraint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CompactConstraint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4174E6B684BB4E27FD7BEE8B75603E9F /* UIView+CompactConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+CompactConstraint.m"; path = "CompactConstraint/UIView+CompactConstraint.m"; sourceTree = "<group>"; };
 		41DF6FEA5A9533BE55E57AA3A963F0C7 /* Pods-SmartStickyPullToRefresh_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SmartStickyPullToRefresh_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		41F398596651130E171BFC770B50DC09 /* Pods_SmartStickyPullToRefresh_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartStickyPullToRefresh_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		525D68A70243A2BFCAC176385D4A4B3F /* Pods_SmartStickyPullToRefresh_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartStickyPullToRefresh_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		61D667411291ECBA078FD1C06ADB1E0B /* Pods-SmartStickyPullToRefresh_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SmartStickyPullToRefresh_Example-dummy.m"; sourceTree = "<group>"; };
+		45E379F0FA06F16140C87A810159A5D5 /* Pods-SmartStickyPullToRefresh_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartStickyPullToRefresh_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		50A43C3026B13C21C2358A37D966DC49 /* CompactConstraint-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CompactConstraint-umbrella.h"; sourceTree = "<group>"; };
+		51AF5109403DC3679EDC681C899136D7 /* SmartStickyPullToRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SmartStickyPullToRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57E65B932E0542BC12924EC4B1FC5623 /* CompactConstraint.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CompactConstraint.modulemap; sourceTree = "<group>"; };
+		69C1A0DA4C43CE7CF6BDD69EC20ECE84 /* SmartStickyPullToRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SmartStickyPullToRefresh-dummy.m"; sourceTree = "<group>"; };
 		73A4BCCB3ED28355CFBC38A7387203A5 /* Pods-SmartStickyPullToRefresh_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SmartStickyPullToRefresh_Example-resources.sh"; sourceTree = "<group>"; };
-		7CFEB40A87F9580E9E66CBE566D54A2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7C872508F0728218C23EEA45C4DF2E35 /* CompactConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CompactConstraint.h; path = CompactConstraint/CompactConstraint.h; sourceTree = "<group>"; };
+		81A52B6575829A6F9CB186548DC9F341 /* SmartStickyPullToRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SmartStickyPullToRefresh.h; sourceTree = "<group>"; };
+		85D2371158B4BEE6923795502B15A372 /* NSLayoutConstraint+CompactConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+CompactConstraint.h"; path = "CompactConstraint/NSLayoutConstraint+CompactConstraint.h"; sourceTree = "<group>"; };
+		8C6DC131A14808934F9CD815C4B89AF9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CBA0218A18CA8D9CD814F143890E5FE /* Pods-SmartStickyPullToRefresh_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SmartStickyPullToRefresh_Example-umbrella.h"; sourceTree = "<group>"; };
+		8F617F27ABC30A2DECD819AF84057E55 /* CompactConstraint-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CompactConstraint-prefix.pch"; sourceTree = "<group>"; };
+		9215B90E916151F89B8F259317CD6B23 /* Pods_SmartStickyPullToRefresh_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartStickyPullToRefresh_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9631CEBD73BD4FC33F3C4EC40C3A0BBB /* Pods-SmartStickyPullToRefresh_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmartStickyPullToRefresh_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		9934679D79AC4FB5D2545B7C060C3C5E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A55057CC7A1D0E6EADCE56B2A6A6318 /* SmartStickyPullToRefresh-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SmartStickyPullToRefresh-Private.xcconfig"; sourceTree = "<group>"; };
 		A539D26684D8926F2D704C1F4123FDDB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A551F80DAF63DCE1CFD77FFDCDA9B114 /* Pods-SmartStickyPullToRefresh_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SmartStickyPullToRefresh_Tests-resources.sh"; sourceTree = "<group>"; };
+		A7DFD2D4CA26A56032425F70B3958C00 /* Pods_SmartStickyPullToRefresh_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartStickyPullToRefresh_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7F21DBADB0D98CC7C3A978720494FBE /* UIView+CompactConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+CompactConstraint.h"; path = "CompactConstraint/UIView+CompactConstraint.h"; sourceTree = "<group>"; };
 		A829753CCE7B1C567AE3DC2EA19B327C /* Pods-SmartStickyPullToRefresh_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmartStickyPullToRefresh_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		AF918E2D7F2CA2E2C18A22E669478EA6 /* SmartStickyPullToRefreshDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SmartStickyPullToRefreshDelegate.h; sourceTree = "<group>"; };
 		AFB698A4793A9C7366D8D06802428D44 /* Pods-SmartStickyPullToRefresh_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SmartStickyPullToRefresh_Example-frameworks.sh"; sourceTree = "<group>"; };
+		B1A343F64B961BB73E47FFE97DB87035 /* Pods-SmartStickyPullToRefresh_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartStickyPullToRefresh_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		B5D3AC8A40509EDAB2558AF3F311FE45 /* NSLayoutConstraint+CompactConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+CompactConstraint.m"; path = "CompactConstraint/NSLayoutConstraint+CompactConstraint.m"; sourceTree = "<group>"; };
 		B77560D63D26512569B1F4C905F4FC37 /* SmartStickyPullToRefresh.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartStickyPullToRefresh.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9FF7508D82B1EBBB95DA56FE4F55A83 /* SmartStickyPullToRefresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmartStickyPullToRefresh-umbrella.h"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		CD5490268FADECEA2BFC75E0CD1E9603 /* Pods-SmartStickyPullToRefresh_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SmartStickyPullToRefresh_Example-umbrella.h"; sourceTree = "<group>"; };
-		D2B4F7897523566835CD1839D32C3386 /* SmartStickyPullToRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SmartStickyPullToRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D38ADA4830413DEFA0AAEE0F86B65986 /* Pods-SmartStickyPullToRefresh_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartStickyPullToRefresh_Example.release.xcconfig"; sourceTree = "<group>"; };
-		D560DA2F372932574EE357DD035F047A /* Pods-SmartStickyPullToRefresh_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartStickyPullToRefresh_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		BD95E23529835BD05B0BE5926CA1D14F /* Pods-SmartStickyPullToRefresh_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartStickyPullToRefresh_Example.release.xcconfig"; sourceTree = "<group>"; };
+		BFEAD625F725362B4563DF4CAA606916 /* Pods-SmartStickyPullToRefresh_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartStickyPullToRefresh_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		CD9F202CFA5B59BDEF3E9DDF30A2A5CB /* CompactConstraint-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "CompactConstraint-Private.xcconfig"; sourceTree = "<group>"; };
+		CEBC73F1B8AFD78F0AF7B53B174714F3 /* CompactConstraint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CompactConstraint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA668A39A69D3DBD4A023D0F580F148A /* Pods-SmartStickyPullToRefresh_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SmartStickyPullToRefresh_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		DD81F9A1D847E12CEA96234C5B5A2DEC /* Pods-SmartStickyPullToRefresh_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SmartStickyPullToRefresh_Tests-dummy.m"; sourceTree = "<group>"; };
 		E040E7BC3D1D0CFCD2FCA572A3702CE5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E087C2CDAC3C230127EB610E73977AB0 /* CompactConstraint.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CompactConstraint.xcconfig; sourceTree = "<group>"; };
 		E101A1686D3060A45732CF69E82ECA22 /* SmartStickyPullToRefresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmartStickyPullToRefresh-prefix.pch"; sourceTree = "<group>"; };
-		EE8CCBCAD8FD2284F14450FC59D15E5F /* Pods-SmartStickyPullToRefresh_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SmartStickyPullToRefresh_Tests-umbrella.h"; sourceTree = "<group>"; };
-		FCA25D3348FC7FF6B6323DCBB4718232 /* SmartStickyPullToRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SmartStickyPullToRefresh-dummy.m"; sourceTree = "<group>"; };
+		E60A1AEA975DCF40C1CB3916438DE0CF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		EF0E0B108912B7918ADCB90FCA183F70 /* Pods-SmartStickyPullToRefresh_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SmartStickyPullToRefresh_Tests-dummy.m"; sourceTree = "<group>"; };
+		FA7F18263AC7B4EEF25AE9ECA7218785 /* CompactConstraint-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CompactConstraint-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4A345C7652392233507A1AD88D104ECE /* Frameworks */ = {
+		0048FD42B3D5188CAF289D56589284EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0E0D721CE74E1C320B350DF57EFABAE /* Foundation.framework in Frameworks */,
+				57E3CC11FCB9E08B9A8BA8BC3F61CD99 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		90E8F83415DF88B8FC77F6A099695C9A /* Frameworks */ = {
+		7DD938435774D52644D4A438E92BC289 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5987282B56AC6459589C3AADC18EACD0 /* Foundation.framework in Frameworks */,
+				B1DE1EEF35EBAD4E58607D3C771C0AE6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A010FB9C28A74200D33B3D1C725D729 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0E257406C028EAD9E9A8D2F21B351E7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C19F6376B19FDEDFB862EB7902418F4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				794AEA01BF45316C42B0B16952971EE7 /* CompactConstraint.framework in Frameworks */,
+				9B5157341C7E86D5FC006F798A9071F6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,25 +170,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EAB42D6DBD66B2E800FFECAF377E5248 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3C08C3D093B05F671EACF566E2215600 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		22BF1628EF9D959743C859175FA76BBF /* Classes */ = {
+		393BCE7315E9E1EAD27106F1E22C84D2 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2325939A1C72E5E70067EDE8 /* SmartStickyPullToRefreshDelegate.h */,
-				232593961C72E5BF0067EDE8 /* SmartStickyPullToRefresh.h */,
-				232593971C72E5BF0067EDE8 /* SmartStickyPullToRefresh.m */,
+				57E65B932E0542BC12924EC4B1FC5623 /* CompactConstraint.modulemap */,
+				E087C2CDAC3C230127EB610E73977AB0 /* CompactConstraint.xcconfig */,
+				CD9F202CFA5B59BDEF3E9DDF30A2A5CB /* CompactConstraint-Private.xcconfig */,
+				FA7F18263AC7B4EEF25AE9ECA7218785 /* CompactConstraint-dummy.m */,
+				8F617F27ABC30A2DECD819AF84057E55 /* CompactConstraint-prefix.pch */,
+				50A43C3026B13C21C2358A37D966DC49 /* CompactConstraint-umbrella.h */,
+				8C6DC131A14808934F9CD815C4B89AF9 /* Info.plist */,
 			);
-			path = Classes;
+			name = "Support Files";
+			path = "../Target Support Files/CompactConstraint";
 			sourceTree = "<group>";
 		};
 		3A75515B808323C0E63B3FD2F8631093 /* Targets Support Files */ = {
@@ -141,7 +200,7 @@
 		42A30915496BA4E38B689473D59FD7F7 /* SmartStickyPullToRefresh */ = {
 			isa = PBXGroup;
 			children = (
-				8C9535FF1F2D3A20FEB06909A6F51618 /* Pod */,
+				E113EA8B0F230F1D610A91AABED27EA7 /* Pod */,
 				5DC0BEADF248715EF7FE280FCBF5E240 /* Support Files */,
 			);
 			name = SmartStickyPullToRefresh;
@@ -155,23 +214,15 @@
 				336A61931F1A3BB19A356EC81F295617 /* Pods-SmartStickyPullToRefresh_Tests.modulemap */,
 				DA668A39A69D3DBD4A023D0F580F148A /* Pods-SmartStickyPullToRefresh_Tests-acknowledgements.markdown */,
 				9631CEBD73BD4FC33F3C4EC40C3A0BBB /* Pods-SmartStickyPullToRefresh_Tests-acknowledgements.plist */,
-				DD81F9A1D847E12CEA96234C5B5A2DEC /* Pods-SmartStickyPullToRefresh_Tests-dummy.m */,
+				EF0E0B108912B7918ADCB90FCA183F70 /* Pods-SmartStickyPullToRefresh_Tests-dummy.m */,
 				346406BCBC59AE62CC8BF958ED3EB318 /* Pods-SmartStickyPullToRefresh_Tests-frameworks.sh */,
 				A551F80DAF63DCE1CFD77FFDCDA9B114 /* Pods-SmartStickyPullToRefresh_Tests-resources.sh */,
-				EE8CCBCAD8FD2284F14450FC59D15E5F /* Pods-SmartStickyPullToRefresh_Tests-umbrella.h */,
-				D560DA2F372932574EE357DD035F047A /* Pods-SmartStickyPullToRefresh_Tests.debug.xcconfig */,
-				1A705D189EBD925E6F125A10DDDA07C4 /* Pods-SmartStickyPullToRefresh_Tests.release.xcconfig */,
+				0A2B14D3E55F5587849E05FD8525D310 /* Pods-SmartStickyPullToRefresh_Tests-umbrella.h */,
+				BFEAD625F725362B4563DF4CAA606916 /* Pods-SmartStickyPullToRefresh_Tests.debug.xcconfig */,
+				45E379F0FA06F16140C87A810159A5D5 /* Pods-SmartStickyPullToRefresh_Tests.release.xcconfig */,
 			);
 			name = "Pods-SmartStickyPullToRefresh_Tests";
 			path = "Target Support Files/Pods-SmartStickyPullToRefresh_Tests";
-			sourceTree = "<group>";
-		};
-		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				7CFEB40A87F9580E9E66CBE566D54A2E /* Foundation.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		5DC0BEADF248715EF7FE280FCBF5E240 /* Support Files */ = {
@@ -181,9 +232,9 @@
 				21A438A58AE076B64AFCC4518F7BAB5F /* SmartStickyPullToRefresh.modulemap */,
 				0180DAF98FFA8A1216F811FFD9A8F1A0 /* SmartStickyPullToRefresh.xcconfig */,
 				9A55057CC7A1D0E6EADCE56B2A6A6318 /* SmartStickyPullToRefresh-Private.xcconfig */,
-				FCA25D3348FC7FF6B6323DCBB4718232 /* SmartStickyPullToRefresh-dummy.m */,
+				69C1A0DA4C43CE7CF6BDD69EC20ECE84 /* SmartStickyPullToRefresh-dummy.m */,
 				E101A1686D3060A45732CF69E82ECA22 /* SmartStickyPullToRefresh-prefix.pch */,
-				2DE21A3EBE5266771A7570A543D1A5F4 /* SmartStickyPullToRefresh-umbrella.h */,
+				B9FF7508D82B1EBBB95DA56FE4F55A83 /* SmartStickyPullToRefresh-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/SmartStickyPullToRefresh";
@@ -196,15 +247,28 @@
 				02AA4DBE14BABD9CDE06FE55FECDDFC1 /* Pods-SmartStickyPullToRefresh_Example.modulemap */,
 				41DF6FEA5A9533BE55E57AA3A963F0C7 /* Pods-SmartStickyPullToRefresh_Example-acknowledgements.markdown */,
 				A829753CCE7B1C567AE3DC2EA19B327C /* Pods-SmartStickyPullToRefresh_Example-acknowledgements.plist */,
-				61D667411291ECBA078FD1C06ADB1E0B /* Pods-SmartStickyPullToRefresh_Example-dummy.m */,
+				1385889677A29EA3F7118B0F8A1C7FA8 /* Pods-SmartStickyPullToRefresh_Example-dummy.m */,
 				AFB698A4793A9C7366D8D06802428D44 /* Pods-SmartStickyPullToRefresh_Example-frameworks.sh */,
 				73A4BCCB3ED28355CFBC38A7387203A5 /* Pods-SmartStickyPullToRefresh_Example-resources.sh */,
-				CD5490268FADECEA2BFC75E0CD1E9603 /* Pods-SmartStickyPullToRefresh_Example-umbrella.h */,
-				32DB0BE677B876EA1E2FA9F627632119 /* Pods-SmartStickyPullToRefresh_Example.debug.xcconfig */,
-				D38ADA4830413DEFA0AAEE0F86B65986 /* Pods-SmartStickyPullToRefresh_Example.release.xcconfig */,
+				8CBA0218A18CA8D9CD814F143890E5FE /* Pods-SmartStickyPullToRefresh_Example-umbrella.h */,
+				B1A343F64B961BB73E47FFE97DB87035 /* Pods-SmartStickyPullToRefresh_Example.debug.xcconfig */,
+				BD95E23529835BD05B0BE5926CA1D14F /* Pods-SmartStickyPullToRefresh_Example.release.xcconfig */,
 			);
 			name = "Pods-SmartStickyPullToRefresh_Example";
 			path = "Target Support Files/Pods-SmartStickyPullToRefresh_Example";
+			sourceTree = "<group>";
+		};
+		7C0E909416577755AB1EC27ACAD29306 /* CompactConstraint */ = {
+			isa = PBXGroup;
+			children = (
+				7C872508F0728218C23EEA45C4DF2E35 /* CompactConstraint.h */,
+				85D2371158B4BEE6923795502B15A372 /* NSLayoutConstraint+CompactConstraint.h */,
+				B5D3AC8A40509EDAB2558AF3F311FE45 /* NSLayoutConstraint+CompactConstraint.m */,
+				A7F21DBADB0D98CC7C3A978720494FBE /* UIView+CompactConstraint.h */,
+				4174E6B684BB4E27FD7BEE8B75603E9F /* UIView+CompactConstraint.m */,
+				393BCE7315E9E1EAD27106F1E22C84D2 /* Support Files */,
+			);
+			path = CompactConstraint;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -212,18 +276,28 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				B6680A7ABC8F61930249FCB9BE87CD5B /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				B0702B4D6FB20E3D1A602A54E4AA06F1 /* Frameworks */,
+				9E60B45E2BFB3BB901958F41A3CE8395 /* Pods */,
 				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
 				3A75515B808323C0E63B3FD2F8631093 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8C9535FF1F2D3A20FEB06909A6F51618 /* Pod */ = {
+		9E60B45E2BFB3BB901958F41A3CE8395 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				22BF1628EF9D959743C859175FA76BBF /* Classes */,
+				7C0E909416577755AB1EC27ACAD29306 /* CompactConstraint */,
 			);
-			path = Pod;
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B0702B4D6FB20E3D1A602A54E4AA06F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEBC73F1B8AFD78F0AF7B53B174714F3 /* CompactConstraint.framework */,
+				D56A98DB610338C06415B5472A0C3974 /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		B6680A7ABC8F61930249FCB9BE87CD5B /* Development Pods */ = {
@@ -234,72 +308,124 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				53F661C0CA7190D2CF05023FB33D61E4 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				41F398596651130E171BFC770B50DC09 /* Pods_SmartStickyPullToRefresh_Example.framework */,
-				525D68A70243A2BFCAC176385D4A4B3F /* Pods_SmartStickyPullToRefresh_Tests.framework */,
+				34679CBFF5FB083D7798E2950A90A35C /* CompactConstraint.framework */,
+				9215B90E916151F89B8F259317CD6B23 /* Pods_SmartStickyPullToRefresh_Example.framework */,
+				A7DFD2D4CA26A56032425F70B3958C00 /* Pods_SmartStickyPullToRefresh_Tests.framework */,
 				B77560D63D26512569B1F4C905F4FC37 /* SmartStickyPullToRefresh.bundle */,
-				D2B4F7897523566835CD1839D32C3386 /* SmartStickyPullToRefresh.framework */,
+				51AF5109403DC3679EDC681C899136D7 /* SmartStickyPullToRefresh.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D56A98DB610338C06415B5472A0C3974 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E60A1AEA975DCF40C1CB3916438DE0CF /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D7006F8C8E86FFBB394C32CD3D71D92C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				81A52B6575829A6F9CB186548DC9F341 /* SmartStickyPullToRefresh.h */,
+				1A2ECA07F0EAE6964BF80AA4977B8B0B /* SmartStickyPullToRefresh.m */,
+				AF918E2D7F2CA2E2C18A22E669478EA6 /* SmartStickyPullToRefreshDelegate.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E113EA8B0F230F1D610A91AABED27EA7 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				D7006F8C8E86FFBB394C32CD3D71D92C /* Classes */,
+			);
+			path = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		16EB22DE880329F04AC4408641C046E8 /* Headers */ = {
+		534F17E023CFB28DB6280A6F7D08C3D2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75302FB8013CD15EE617D99575C0C882 /* Pods-SmartStickyPullToRefresh_Tests-umbrella.h in Headers */,
+				0289CA0D1A5F80D3AAD764FFB696842B /* Pods-SmartStickyPullToRefresh_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2C98ACBDDA0E3A598E34F3743A96EFDD /* Headers */ = {
+		55C724BF7A628AD5CFAA0A87BF249AD0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E3F1D8FB8C5B7D29B188AFDF22B95B0 /* Pods-SmartStickyPullToRefresh_Example-umbrella.h in Headers */,
-				232593981C72E5BF0067EDE8 /* SmartStickyPullToRefresh.h in Headers */,
+				1120771F09F7074081B136A26D81B233 /* CompactConstraint-umbrella.h in Headers */,
+				A2F6EF2B84D6A512A6C0E2D6EB33FA2E /* CompactConstraint.h in Headers */,
+				A9D367EFF44F896D24D1C5DB5E429CD6 /* NSLayoutConstraint+CompactConstraint.h in Headers */,
+				38F56DE1C9F736C77F5B0A5484C48863 /* UIView+CompactConstraint.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7D296BBC7CD0523D1E78A41844268FE1 /* Headers */ = {
+		569D7A2CCFE758842AA52B11930C0323 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1621BA8FFB967E651E50FC3D143F1B51 /* SmartStickyPullToRefresh-umbrella.h in Headers */,
+				86CB02B571143EC87166AC735F5054D8 /* SmartStickyPullToRefresh-umbrella.h in Headers */,
+				E3C159A995B874D7414532199ECABF33 /* SmartStickyPullToRefresh.h in Headers */,
+				B21938CED47BF649CD8C08817C370A55 /* SmartStickyPullToRefreshDelegate.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0FBF9B7BEA0690F40740BB8B33961DF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4567C9F173133991C64AC9A56409B117 /* Pods-SmartStickyPullToRefresh_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9B7E48423E440D23B9F6CCD46D2ABCDC /* Pods-SmartStickyPullToRefresh_Example */ = {
+		4F727062FA0BC10AD28323C393693EC4 /* SmartStickyPullToRefresh */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8E29037CE17B5D94B5D2DB9F61B702EE /* Build configuration list for PBXNativeTarget "Pods-SmartStickyPullToRefresh_Example" */;
+			buildConfigurationList = 1E7965433979BAB60C3347C7B2F3E0F9 /* Build configuration list for PBXNativeTarget "SmartStickyPullToRefresh" */;
 			buildPhases = (
-				A758E8D865F528C32DF8409AB67B508A /* Sources */,
-				4A345C7652392233507A1AD88D104ECE /* Frameworks */,
-				2C98ACBDDA0E3A598E34F3743A96EFDD /* Headers */,
+				315CC58E89F46A7778D959E1D7D9A62A /* Sources */,
+				C19F6376B19FDEDFB862EB7902418F4A /* Frameworks */,
+				F4ED6A2F1BD0262855C39C6E6358C3B0 /* Resources */,
+				569D7A2CCFE758842AA52B11930C0323 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9B3BE2E9452D157FE70EB266804037F6 /* PBXTargetDependency */,
+				B0E9F0620D890967E83C7BCF771E5C14 /* PBXTargetDependency */,
+				A7AE081D302306854846B331615C115A /* PBXTargetDependency */,
+			);
+			name = SmartStickyPullToRefresh;
+			productName = SmartStickyPullToRefresh;
+			productReference = 51AF5109403DC3679EDC681C899136D7 /* SmartStickyPullToRefresh.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		94F5EC5A5B3B18EB96956ACE0B775E5C /* Pods-SmartStickyPullToRefresh_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD6A71BF064D584DB337701C017881AA /* Build configuration list for PBXNativeTarget "Pods-SmartStickyPullToRefresh_Example" */;
+			buildPhases = (
+				9A305A84457C8DC242E7DD62DCBF0571 /* Sources */,
+				9A010FB9C28A74200D33B3D1C725D729 /* Frameworks */,
+				534F17E023CFB28DB6280A6F7D08C3D2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F0E4C4AF9097DDB704D8C6B58FEFCAC /* PBXTargetDependency */,
+				88F26EE069563C3F3F89EDFB9B489117 /* PBXTargetDependency */,
 			);
 			name = "Pods-SmartStickyPullToRefresh_Example";
 			productName = "Pods-SmartStickyPullToRefresh_Example";
-			productReference = 41F398596651130E171BFC770B50DC09 /* Pods_SmartStickyPullToRefresh_Example.framework */;
+			productReference = 9215B90E916151F89B8F259317CD6B23 /* Pods_SmartStickyPullToRefresh_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9C3B11C98CFB5A49FEC841ACEA3B2ADE /* SmartStickyPullToRefresh-SmartStickyPullToRefresh */ = {
@@ -319,41 +445,40 @@
 			productReference = B77560D63D26512569B1F4C905F4FC37 /* SmartStickyPullToRefresh.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		A310BCA0FF886FCFCC7AEED9C0F41E36 /* SmartStickyPullToRefresh */ = {
+		A0FD4320A6DB9340CCAD828305D934C1 /* Pods-SmartStickyPullToRefresh_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DAEFE4E0587176F9D981970B85495F6B /* Build configuration list for PBXNativeTarget "SmartStickyPullToRefresh" */;
+			buildConfigurationList = C9A0F6336AA5DFE8B143F30873F03963 /* Build configuration list for PBXNativeTarget "Pods-SmartStickyPullToRefresh_Tests" */;
 			buildPhases = (
-				036B371D227F383C25F3704BB5B54184 /* Sources */,
-				90E8F83415DF88B8FC77F6A099695C9A /* Frameworks */,
-				1C54B4C5DB8EA8B0DB11CB62F227A2B0 /* Resources */,
-				7D296BBC7CD0523D1E78A41844268FE1 /* Headers */,
+				C3E9CA270F8AD2C4126FA265F99F744E /* Sources */,
+				0048FD42B3D5188CAF289D56589284EB /* Frameworks */,
+				F0FBF9B7BEA0690F40740BB8B33961DF /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				380B067447B4D47549BCFAC8B0D6DDDD /* PBXTargetDependency */,
-			);
-			name = SmartStickyPullToRefresh;
-			productName = SmartStickyPullToRefresh;
-			productReference = D2B4F7897523566835CD1839D32C3386 /* SmartStickyPullToRefresh.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		D9458C67F6DB01B1277D572EC87ED665 /* Pods-SmartStickyPullToRefresh_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 35CFD4FF2C9BF2A46A43AAF2E537EDE4 /* Build configuration list for PBXNativeTarget "Pods-SmartStickyPullToRefresh_Tests" */;
-			buildPhases = (
-				F771ECF6E6C2AE4AF9D42F9E5F6A6804 /* Sources */,
-				EAB42D6DBD66B2E800FFECAF377E5248 /* Frameworks */,
-				16EB22DE880329F04AC4408641C046E8 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D5E9A6D64F0047AB55C3E94F8FA0706F /* PBXTargetDependency */,
+				07C291EE870BB9D7825A7003F773B0D8 /* PBXTargetDependency */,
+				0A90EE0A0F0136C7FBD5567C00D5AC73 /* PBXTargetDependency */,
 			);
 			name = "Pods-SmartStickyPullToRefresh_Tests";
 			productName = "Pods-SmartStickyPullToRefresh_Tests";
-			productReference = 525D68A70243A2BFCAC176385D4A4B3F /* Pods_SmartStickyPullToRefresh_Tests.framework */;
+			productReference = A7DFD2D4CA26A56032425F70B3958C00 /* Pods_SmartStickyPullToRefresh_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D946C1C01172C9C3E8247821AC549828 /* CompactConstraint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A0B158DFCF31D737D603F2118B97A36 /* Build configuration list for PBXNativeTarget "CompactConstraint" */;
+			buildPhases = (
+				050DFAD830EDDDB07BCC5F23D2B04989 /* Sources */,
+				7DD938435774D52644D4A438E92BC289 /* Frameworks */,
+				55C724BF7A628AD5CFAA0A87BF249AD0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CompactConstraint;
+			productName = CompactConstraint;
+			productReference = 34679CBFF5FB083D7798E2950A90A35C /* CompactConstraint.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -377,23 +502,16 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9B7E48423E440D23B9F6CCD46D2ABCDC /* Pods-SmartStickyPullToRefresh_Example */,
-				D9458C67F6DB01B1277D572EC87ED665 /* Pods-SmartStickyPullToRefresh_Tests */,
-				A310BCA0FF886FCFCC7AEED9C0F41E36 /* SmartStickyPullToRefresh */,
+				D946C1C01172C9C3E8247821AC549828 /* CompactConstraint */,
+				94F5EC5A5B3B18EB96956ACE0B775E5C /* Pods-SmartStickyPullToRefresh_Example */,
+				A0FD4320A6DB9340CCAD828305D934C1 /* Pods-SmartStickyPullToRefresh_Tests */,
+				4F727062FA0BC10AD28323C393693EC4 /* SmartStickyPullToRefresh */,
 				9C3B11C98CFB5A49FEC841ACEA3B2ADE /* SmartStickyPullToRefresh-SmartStickyPullToRefresh */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1C54B4C5DB8EA8B0DB11CB62F227A2B0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				37037BA9C821BA1C6FC55090D0DC4D63 /* SmartStickyPullToRefresh.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D0FB98B30155087F0F52B67C6D3A4FE0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -401,23 +519,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		036B371D227F383C25F3704BB5B54184 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+		F4ED6A2F1BD0262855C39C6E6358C3B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E93B7E8CA13063E7236D56D647567F7 /* SmartStickyPullToRefresh-dummy.m in Sources */,
+				58CE823E98E1B479D8D488CD9E01E2D9 /* SmartStickyPullToRefresh.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A758E8D865F528C32DF8409AB67B508A /* Sources */ = {
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		050DFAD830EDDDB07BCC5F23D2B04989 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				232593991C72E5BF0067EDE8 /* SmartStickyPullToRefresh.m in Sources */,
-				9F5AC54753CF8395E25D3CCD7ED901C0 /* Pods-SmartStickyPullToRefresh_Example-dummy.m in Sources */,
+				0F6AAC8821640E1CFD1A169D3DF623BC /* CompactConstraint-dummy.m in Sources */,
+				8F85796B59E5A3763593E89FDA8E5697 /* NSLayoutConstraint+CompactConstraint.m in Sources */,
+				5896F7F2B0251BAC45B6AF864C453384 /* UIView+CompactConstraint.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		315CC58E89F46A7778D959E1D7D9A62A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A3C08BB33BE0E8F383E50857BBDAB5F /* SmartStickyPullToRefresh-dummy.m in Sources */,
+				82E4C460FFD2938046B3D5256176920D /* SmartStickyPullToRefresh.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A305A84457C8DC242E7DD62DCBF0571 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3D1BD4EC3593AC0CED0221EF41D7903 /* Pods-SmartStickyPullToRefresh_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,73 +564,144 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F771ECF6E6C2AE4AF9D42F9E5F6A6804 /* Sources */ = {
+		C3E9CA270F8AD2C4126FA265F99F744E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6656DFBF1A6701F019B3689E858A819 /* Pods-SmartStickyPullToRefresh_Tests-dummy.m in Sources */,
+				08BBE05B7EC4907BD07F32DCC50C2822 /* Pods-SmartStickyPullToRefresh_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		380B067447B4D47549BCFAC8B0D6DDDD /* PBXTargetDependency */ = {
+		07C291EE870BB9D7825A7003F773B0D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CompactConstraint;
+			target = D946C1C01172C9C3E8247821AC549828 /* CompactConstraint */;
+			targetProxy = EE75960040214DA366B3EE91F8BDDE73 /* PBXContainerItemProxy */;
+		};
+		0A90EE0A0F0136C7FBD5567C00D5AC73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SmartStickyPullToRefresh;
+			target = 4F727062FA0BC10AD28323C393693EC4 /* SmartStickyPullToRefresh */;
+			targetProxy = 3B5DFC2CC49876F9486A03FAA346C172 /* PBXContainerItemProxy */;
+		};
+		3F0E4C4AF9097DDB704D8C6B58FEFCAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CompactConstraint;
+			target = D946C1C01172C9C3E8247821AC549828 /* CompactConstraint */;
+			targetProxy = 71C2B5A0CD98D4983454019ADC0DDFA3 /* PBXContainerItemProxy */;
+		};
+		88F26EE069563C3F3F89EDFB9B489117 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SmartStickyPullToRefresh;
+			target = 4F727062FA0BC10AD28323C393693EC4 /* SmartStickyPullToRefresh */;
+			targetProxy = 5F738851945A6B68206EAE5234B38CCD /* PBXContainerItemProxy */;
+		};
+		A7AE081D302306854846B331615C115A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "SmartStickyPullToRefresh-SmartStickyPullToRefresh";
 			target = 9C3B11C98CFB5A49FEC841ACEA3B2ADE /* SmartStickyPullToRefresh-SmartStickyPullToRefresh */;
-			targetProxy = E009F77379A4FA63C174E5C8F62D4314 /* PBXContainerItemProxy */;
+			targetProxy = 57CEC7FF003E36FBB05DB360EF8E1C7D /* PBXContainerItemProxy */;
 		};
-		9B3BE2E9452D157FE70EB266804037F6 /* PBXTargetDependency */ = {
+		B0E9F0620D890967E83C7BCF771E5C14 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SmartStickyPullToRefresh;
-			target = A310BCA0FF886FCFCC7AEED9C0F41E36 /* SmartStickyPullToRefresh */;
-			targetProxy = 2587CB37B3E015EEE723CA55186B1E21 /* PBXContainerItemProxy */;
-		};
-		D5E9A6D64F0047AB55C3E94F8FA0706F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SmartStickyPullToRefresh;
-			target = A310BCA0FF886FCFCC7AEED9C0F41E36 /* SmartStickyPullToRefresh */;
-			targetProxy = DD1D07D7E9C0593885BD6551C09CAD61 /* PBXContainerItemProxy */;
+			name = CompactConstraint;
+			target = D946C1C01172C9C3E8247821AC549828 /* CompactConstraint */;
+			targetProxy = AE49825E3A0666DAF44221713AC4707E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		03CA91998D6773EC5D02B3DB87B8353E /* Release */ = {
+		0735028A9EE7F9EC39EF9652B592627C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFEAD625F725362B4563DF4CAA606916 /* Pods-SmartStickyPullToRefresh_Tests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SmartStickyPullToRefresh_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-SmartStickyPullToRefresh_Tests/Pods-SmartStickyPullToRefresh_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_SmartStickyPullToRefresh_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		305440776C93599825099A2FE8FE5894 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45E379F0FA06F16140C87A810159A5D5 /* Pods-SmartStickyPullToRefresh_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SmartStickyPullToRefresh_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-SmartStickyPullToRefresh_Tests/Pods-SmartStickyPullToRefresh_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_SmartStickyPullToRefresh_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */ = {
+		5B3D56BEA08CB8150180AE4C4807EDF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1A343F64B961BB73E47FFE97DB87035 /* Pods-SmartStickyPullToRefresh_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SmartStickyPullToRefresh_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-SmartStickyPullToRefresh_Example/Pods-SmartStickyPullToRefresh_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_SmartStickyPullToRefresh_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -526,14 +733,75 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		6B6F5FC151A7665C5F8C2500B794FA4F /* Release */ = {
+		74857149DC1E0D599B8A01A78349A926 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		94057D5FC89C0300063A5D6B7D5F8BC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD9F202CFA5B59BDEF3E9DDF30A2A5CB /* CompactConstraint-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.1.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CompactConstraint/CompactConstraint-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CompactConstraint/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CompactConstraint/CompactConstraint.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = CompactConstraint;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		94FE10FA752CFDFDFDDC3FEB7C592288 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9A55057CC7A1D0E6EADCE56B2A6A6318 /* SmartStickyPullToRefresh-Private.xcconfig */;
 			buildSettings = {
@@ -547,40 +815,11 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SmartStickyPullToRefresh/SmartStickyPullToRefresh-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SmartStickyPullToRefresh/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SmartStickyPullToRefresh/SmartStickyPullToRefresh.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SmartStickyPullToRefresh;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		962311283E8A935B2B954AA90C6B938A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D560DA2F372932574EE357DD035F047A /* Pods-SmartStickyPullToRefresh_Tests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SmartStickyPullToRefresh_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-SmartStickyPullToRefresh_Tests/Pods-SmartStickyPullToRefresh_Tests.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_SmartStickyPullToRefresh_Tests;
+				PRODUCT_NAME = SmartStickyPullToRefresh;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -601,9 +840,36 @@
 			};
 			name = Debug;
 		};
-		AF36EC81BD0016448C51EDD9213DAA5F /* Release */ = {
+		A53A767793131CAA339840E120699E11 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A705D189EBD925E6F125A10DDDA07C4 /* Pods-SmartStickyPullToRefresh_Tests.release.xcconfig */;
+			baseConfigurationReference = CD9F202CFA5B59BDEF3E9DDF30A2A5CB /* CompactConstraint-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.1.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CompactConstraint/CompactConstraint-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CompactConstraint/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CompactConstraint/CompactConstraint.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CompactConstraint;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A9EA5E737E4B4A5C8F9FA4F69D4B7F0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD95E23529835BD05B0BE5926CA1D14F /* Pods-SmartStickyPullToRefresh_Example.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -612,16 +878,16 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SmartStickyPullToRefresh_Tests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-SmartStickyPullToRefresh_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-SmartStickyPullToRefresh_Tests/Pods-SmartStickyPullToRefresh_Tests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-SmartStickyPullToRefresh_Example/Pods-SmartStickyPullToRefresh_Example.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_SmartStickyPullToRefresh_Tests;
+				PRODUCT_NAME = Pods_SmartStickyPullToRefresh_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -642,7 +908,7 @@
 			};
 			name = Release;
 		};
-		E01A829E95392638BEE9082BFB43E724 /* Debug */ = {
+		D848167260DF8AACBAE38276BB2204A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9A55057CC7A1D0E6EADCE56B2A6A6318 /* SmartStickyPullToRefresh-Private.xcconfig */;
 			buildSettings = {
@@ -656,40 +922,11 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SmartStickyPullToRefresh/SmartStickyPullToRefresh-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SmartStickyPullToRefresh/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SmartStickyPullToRefresh/SmartStickyPullToRefresh.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SmartStickyPullToRefresh;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F2330B45AAF6B4E16E2B7AE24ACF7060 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D38ADA4830413DEFA0AAEE0F86B65986 /* Pods-SmartStickyPullToRefresh_Example.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SmartStickyPullToRefresh_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-SmartStickyPullToRefresh_Example/Pods-SmartStickyPullToRefresh_Example.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_SmartStickyPullToRefresh_Example;
+				PRODUCT_NAME = SmartStickyPullToRefresh;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -698,52 +935,32 @@
 			};
 			name = Release;
 		};
-		FD350D7975C840EC7CBAA374B83FBBDB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 32DB0BE677B876EA1E2FA9F627632119 /* Pods-SmartStickyPullToRefresh_Example.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SmartStickyPullToRefresh_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-SmartStickyPullToRefresh_Example/Pods-SmartStickyPullToRefresh_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_SmartStickyPullToRefresh_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		0A0B158DFCF31D737D603F2118B97A36 /* Build configuration list for PBXNativeTarget "CompactConstraint" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */,
-				03CA91998D6773EC5D02B3DB87B8353E /* Release */,
+				94057D5FC89C0300063A5D6B7D5F8BC6 /* Debug */,
+				A53A767793131CAA339840E120699E11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		35CFD4FF2C9BF2A46A43AAF2E537EDE4 /* Build configuration list for PBXNativeTarget "Pods-SmartStickyPullToRefresh_Tests" */ = {
+		1E7965433979BAB60C3347C7B2F3E0F9 /* Build configuration list for PBXNativeTarget "SmartStickyPullToRefresh" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				962311283E8A935B2B954AA90C6B938A /* Debug */,
-				AF36EC81BD0016448C51EDD9213DAA5F /* Release */,
+				94FE10FA752CFDFDFDDC3FEB7C592288 /* Debug */,
+				D848167260DF8AACBAE38276BB2204A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */,
+				74857149DC1E0D599B8A01A78349A926 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -757,20 +974,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8E29037CE17B5D94B5D2DB9F61B702EE /* Build configuration list for PBXNativeTarget "Pods-SmartStickyPullToRefresh_Example" */ = {
+		C9A0F6336AA5DFE8B143F30873F03963 /* Build configuration list for PBXNativeTarget "Pods-SmartStickyPullToRefresh_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FD350D7975C840EC7CBAA374B83FBBDB /* Debug */,
-				F2330B45AAF6B4E16E2B7AE24ACF7060 /* Release */,
+				0735028A9EE7F9EC39EF9652B592627C /* Debug */,
+				305440776C93599825099A2FE8FE5894 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DAEFE4E0587176F9D981970B85495F6B /* Build configuration list for PBXNativeTarget "SmartStickyPullToRefresh" */ = {
+		FD6A71BF064D584DB337701C017881AA /* Build configuration list for PBXNativeTarget "Pods-SmartStickyPullToRefresh_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E01A829E95392638BEE9082BFB43E724 /* Debug */,
-				6B6F5FC151A7665C5F8C2500B794FA4F /* Release */,
+				5B3D56BEA08CB8150180AE4C4807EDF9 /* Debug */,
+				A9EA5E737E4B4A5C8F9FA4F69D4B7F0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

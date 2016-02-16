@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "455C62C966F7189DFC186A8B"
+               BlueprintIdentifier = "C512BB11D0D475F46C5B9C07"
                BuildableName = "Pods_SmartStickyPullToRefresh_Example.framework"
                BlueprintName = "Pods-SmartStickyPullToRefresh_Example"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CompactConstraint.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SmartStickyPullToRefresh_Example.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,7 +32,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>9B7E48423E440D23B9F6CCD46D2ABCDC</key>
+		<key>4F727062FA0BC10AD28323C393693EC4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>94F5EC5A5B3B18EB96956ACE0B775E5C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -37,12 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A310BCA0FF886FCFCC7AEED9C0F41E36</key>
+		<key>A0FD4320A6DB9340CCAD828305D934C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D9458C67F6DB01B1277D572EC87ED665</key>
+		<key>D946C1C01172C9C3E8247821AC549828</key>
 		<dict>
 			<key>primary</key>
 			<true/>

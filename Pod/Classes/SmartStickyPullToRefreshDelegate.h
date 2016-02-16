@@ -20,11 +20,13 @@
 
 - (void)pullToRefresh:(SmartStickyPullToRefresh *)refreshControl didStopDetectingFromScrollView:(UIScrollView *)scrollView;
 
-- (void)pullToRefreshDidStartAnimating:(SmartStickyPullToRefresh *)refreshControl;
+- (void)pullToRefreshDidPreActivate:(SmartStickyPullToRefresh *)refreshControl;
+
+- (void)pullToRefreshDidActivate:(SmartStickyPullToRefresh *)refreshControl;
 
 - (void)pullToRefreshValueChanged:(SmartStickyPullToRefresh *)refreshControl;
 
-- (void)pullToRefreshDidStopAnimating:(SmartStickyPullToRefresh *)refreshControl;
+- (void)pullToRefreshDidStopActivating:(SmartStickyPullToRefresh *)refreshControl;
 
 @end
 
