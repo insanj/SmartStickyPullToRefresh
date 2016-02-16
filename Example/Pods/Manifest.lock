@@ -1,0 +1,14 @@
+PODS:
+  - SmartStickyPullToRefresh (0.1.0)
+
+DEPENDENCIES:
+  - SmartStickyPullToRefresh (from `../`)
+
+EXTERNAL SOURCES:
+  SmartStickyPullToRefresh:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SmartStickyPullToRefresh: e43188331bc64fcc285c43609120cda45d1eb203
+
+COCOAPODS: 0.38.2

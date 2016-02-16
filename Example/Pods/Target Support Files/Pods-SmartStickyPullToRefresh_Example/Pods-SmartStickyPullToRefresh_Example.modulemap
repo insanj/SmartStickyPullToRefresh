@@ -1,0 +1,6 @@
+framework module Pods_SmartStickyPullToRefresh_Example {
+  umbrella header "Pods-SmartStickyPullToRefresh_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

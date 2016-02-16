@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-SmartStickyPullToRefresh_Example.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SmartStickyPullToRefresh_Tests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SmartStickyPullToRefresh-SmartStickyPullToRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SmartStickyPullToRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>9B7E48423E440D23B9F6CCD46D2ABCDC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9C3B11C98CFB5A49FEC841ACEA3B2ADE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A310BCA0FF886FCFCC7AEED9C0F41E36</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D9458C67F6DB01B1277D572EC87ED665</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
