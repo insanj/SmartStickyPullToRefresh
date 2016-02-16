@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1621BA8FFB967E651E50FC3D143F1B51 /* SmartStickyPullToRefresh-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DE21A3EBE5266771A7570A543D1A5F4 /* SmartStickyPullToRefresh-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		280D30B9B860FDCFAEBF96BECC11DC1B /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = F06476B845D43874278B17948753DEDB /* ReplaceMe.m */; };
+		232593981C72E5BF0067EDE8 /* SmartStickyPullToRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 232593961C72E5BF0067EDE8 /* SmartStickyPullToRefresh.h */; };
+		232593991C72E5BF0067EDE8 /* SmartStickyPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 232593971C72E5BF0067EDE8 /* SmartStickyPullToRefresh.m */; };
 		37037BA9C821BA1C6FC55090D0DC4D63 /* SmartStickyPullToRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B77560D63D26512569B1F4C905F4FC37 /* SmartStickyPullToRefresh.bundle */; };
 		3C08C3D093B05F671EACF566E2215600 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFEB40A87F9580E9E66CBE566D54A2E /* Foundation.framework */; };
 		3E93B7E8CA13063E7236D56D647567F7 /* SmartStickyPullToRefresh-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA25D3348FC7FF6B6323DCBB4718232 /* SmartStickyPullToRefresh-dummy.m */; };
@@ -49,6 +50,9 @@
 		02AA4DBE14BABD9CDE06FE55FECDDFC1 /* Pods-SmartStickyPullToRefresh_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SmartStickyPullToRefresh_Example.modulemap"; sourceTree = "<group>"; };
 		1A705D189EBD925E6F125A10DDDA07C4 /* Pods-SmartStickyPullToRefresh_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartStickyPullToRefresh_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		21A438A58AE076B64AFCC4518F7BAB5F /* SmartStickyPullToRefresh.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SmartStickyPullToRefresh.modulemap; sourceTree = "<group>"; };
+		232593961C72E5BF0067EDE8 /* SmartStickyPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartStickyPullToRefresh.h; sourceTree = "<group>"; };
+		232593971C72E5BF0067EDE8 /* SmartStickyPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartStickyPullToRefresh.m; sourceTree = "<group>"; };
+		2325939A1C72E5E70067EDE8 /* SmartStickyPullToRefreshDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmartStickyPullToRefreshDelegate.h; sourceTree = "<group>"; };
 		2DE21A3EBE5266771A7570A543D1A5F4 /* SmartStickyPullToRefresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmartStickyPullToRefresh-umbrella.h"; sourceTree = "<group>"; };
 		32DB0BE677B876EA1E2FA9F627632119 /* Pods-SmartStickyPullToRefresh_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartStickyPullToRefresh_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		336A61931F1A3BB19A356EC81F295617 /* Pods-SmartStickyPullToRefresh_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SmartStickyPullToRefresh_Tests.modulemap"; sourceTree = "<group>"; };
@@ -77,7 +81,6 @@
 		E040E7BC3D1D0CFCD2FCA572A3702CE5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E101A1686D3060A45732CF69E82ECA22 /* SmartStickyPullToRefresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmartStickyPullToRefresh-prefix.pch"; sourceTree = "<group>"; };
 		EE8CCBCAD8FD2284F14450FC59D15E5F /* Pods-SmartStickyPullToRefresh_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SmartStickyPullToRefresh_Tests-umbrella.h"; sourceTree = "<group>"; };
-		F06476B845D43874278B17948753DEDB /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
 		FCA25D3348FC7FF6B6323DCBB4718232 /* SmartStickyPullToRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SmartStickyPullToRefresh-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,7 +122,9 @@
 		22BF1628EF9D959743C859175FA76BBF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				F06476B845D43874278B17948753DEDB /* ReplaceMe.m */,
+				2325939A1C72E5E70067EDE8 /* SmartStickyPullToRefreshDelegate.h */,
+				232593961C72E5BF0067EDE8 /* SmartStickyPullToRefresh.h */,
+				232593971C72E5BF0067EDE8 /* SmartStickyPullToRefresh.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E3F1D8FB8C5B7D29B188AFDF22B95B0 /* Pods-SmartStickyPullToRefresh_Example-umbrella.h in Headers */,
+				232593981C72E5BF0067EDE8 /* SmartStickyPullToRefresh.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +408,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				280D30B9B860FDCFAEBF96BECC11DC1B /* ReplaceMe.m in Sources */,
 				3E93B7E8CA13063E7236D56D647567F7 /* SmartStickyPullToRefresh-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				232593991C72E5BF0067EDE8 /* SmartStickyPullToRefresh.m in Sources */,
 				9F5AC54753CF8395E25D3CCD7ED901C0 /* Pods-SmartStickyPullToRefresh_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

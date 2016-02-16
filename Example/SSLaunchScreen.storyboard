@@ -8,9 +8,10 @@
         <scene sceneID="60u-p3-UlQ">
             <objects>
                 <navigationController id="A0a-d5-riz" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WQe-vp-fnw">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="WQe-vp-fnw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.95294117647058818" green="0.46666666666666667" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="d5i-Pk-7ax" kind="relationship" relationship="rootViewController" id="cBq-gV-znw"/>

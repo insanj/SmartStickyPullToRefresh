@@ -512,7 +512,6 @@
 			baseConfigurationReference = 8312CD24AF9E1B79D7CAA3E0 /* Pods-SmartStickyPullToRefresh_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SmartStickyPullToRefresh/SmartStickyPullToRefresh-Prefix.pch";
 				INFOPLIST_FILE = "SmartStickyPullToRefresh/SmartStickyPullToRefresh-Info.plist";
@@ -529,7 +528,6 @@
 			baseConfigurationReference = DE46E62047E186CE7A3B7204 /* Pods-SmartStickyPullToRefresh_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SmartStickyPullToRefresh/SmartStickyPullToRefresh-Prefix.pch";
 				INFOPLIST_FILE = "SmartStickyPullToRefresh/SmartStickyPullToRefresh-Info.plist";

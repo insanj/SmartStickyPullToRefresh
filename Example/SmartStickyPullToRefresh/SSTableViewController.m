@@ -33,6 +33,14 @@
     [self.tableView reloadData];
 }
 
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
+        [self setupSmartPhrases];
+        [self.tableView reloadData];
+    } completion:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
+    }];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -50,7 +58,7 @@
     CGSize phraseBoundingSize = CGSizeMake(self.tableView.frame.size.width - 25.0, INFINITY);
     for (NSString *phrase in _smartPhrases) {
         CGSize phraseSize = [phrase boundingRectWithSize:phraseBoundingSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18.0 weight:UIFontWeightRegular]} context:nil].size;
-        [generatedHeights addObject:@(phraseSize.height)];
+        [generatedHeights addObject:@(phraseSize.height + 20.0)];
     }
     
     _smartPhraseHeights = [NSArray arrayWithArray:generatedHeights];
