@@ -4,13 +4,12 @@
 [![License](https://img.shields.io/cocoapods/l/SmartStickyPullToRefresh.svg?style=flat)](http://cocoapods.org/pods/SmartStickyPullToRefresh)
 [![Platform](https://img.shields.io/cocoapods/p/SmartStickyPullToRefresh.svg?style=flat)](http://cocoapods.org/pods/SmartStickyPullToRefresh)
 
-## Usage
-
 Smart, sticky pull to refresh control for any UIScrollView. Instead of relying on the header view of a table or collection view, SmartStickyPullToRefresh uses a custom banner view that drops down from a user-selected `parentView` after a `parentScrollView` surpasses `stickyScrollViewActivationOffset` (use `stickyScrollViewPreActivationOffset` for pre-activation instructions and `stickyScrollViewDeactivationOffset` to hide these instructions).
 
 ![](Example/Screenshots/screenie_1.png)![](Example/Screenshots/screenie_2.png)
 ![](Example/Screenshots/screenie_3.png)
 
+## Usage
 
 	SmartStickyPullToRefresh *control = [[SmartStickyPullToRefresh alloc] init];
 
@@ -23,6 +22,12 @@ Smart, sticky pull to refresh control for any UIScrollView. Instead of relying o
 	[control beginDetectingPullToRefresh]; // throw into viewDidAppear -- adds KVO as-needed to stickyScrollView to animate SmartStickyPullToRefresh (a UIView) beneath and anchored below stickyParentView
 	
 	[control stopDetectingPullToRefresh]; // throw into viewDidDisappear -- removes KVO and any existing pull to refresh business
+	
+It is highly recommended to manually adjust the activation offsets, such as the below snippet from [Submarine](http://insanj.com/submarine):
+
+	refreshControl.stickyScrollViewDeactivationOffset = -CGRectGetMaxY(self.navigationController.navigationBar.frame) + (self.shyNavBarManager.extensionView ? -44.0 : 0);
+    refreshControl.stickyScrollViewPreActivationOffset = _smartPullToRefresh.stickyScrollViewDeactivationOffset - 50.0;
+    refreshControl.stickyScrollViewActivationOffset = _smartPullToRefresh.stickyScrollViewPreActivationOffset - 50.0;
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
