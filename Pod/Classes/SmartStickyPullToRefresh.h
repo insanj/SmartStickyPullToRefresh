@@ -22,9 +22,7 @@ typedef NS_ENUM(NSUInteger, SmartStickyPullToRefreshState) {
 
 @property (strong, nonatomic) UIScrollView *stickyScrollView;
 
-@property (nonatomic, readwrite) CGFloat stickyScrollViewDeactivationOffset, stickyScrollViewActivationOffset; // contentOffset.y in stickyScrollView that fully activates pullToRefresh (default is -164.0 which means you probably want to use 0, or something to activate at the precise sensitivity desired)
-
-@property (nonatomic, readwrite) CGFloat stickyScrollViewPreActivationOffset; // usually just a few points off from stickyScrollViewActivationOffset, defaults to -100.0
+@property (nonatomic, readwrite) CGFloat stickyScrollViewPreActivationOffset, stickyScrollViewDeactivationOffset, stickyScrollViewActivationOffset; // contentOffset.y in stickyScrollView that means (0) the refreshControl should be "deactivated", if in pre-activated state (1) the refreshControl should pre-activate and show the appropriate label, or (3) fully activates pullToRefresh (default is -64.0, -100.0, -164.0)
 
 @property (strong, nonatomic) NSObject <SmartStickyPullToRefreshDelegate> *stickySmartDelegate;
 

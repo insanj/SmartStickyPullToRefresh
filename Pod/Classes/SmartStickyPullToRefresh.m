@@ -121,7 +121,7 @@
         CGPoint currentOffsetPoint = [change[NSKeyValueChangeNewKey] CGPointValue];
         CGFloat currentOffset = currentOffsetPoint.y;
         
-        NSLog(@"current %f, pre %f, act %f", currentOffset, _stickyScrollViewPreActivationOffset, _stickyScrollViewActivationOffset);
+        // NSLog(@"current %f, pre %f, act %f", currentOffset, _stickyScrollViewPreActivationOffset, _stickyScrollViewActivationOffset);
         
         if (currentOffset > _stickyScrollViewPreActivationOffset) { // not activated at all
             if (currentOffset >= self.stickyScrollViewDeactivationOffset && _stickyRefreshState == SmartStickyPullToRefreshStateAlreadyRefreshedThisTime) {
@@ -164,17 +164,19 @@
     [UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:0.9 initialSpringVelocity:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         _pullToRefreshBlurView.frame = pullToRefreshActivatedFrame;
     } completion:^(BOOL finished) {
-        _pullToRefreshBlurView.translatesAutoresizingMaskIntoConstraints = NO;
-        [_pullToRefreshBlurView.superview addCompactConstraints:@[@"blur.top = stickyParent.bottom - 1",
-                                                                  @"blur.left = super.left - 1",
-                                                                  @"blur.right = super.right + 1",
-                                                                  @"blur.height = blurHeight"]
-                                                        metrics:@{@"blurHeight" : @(pullToRefreshBannerHeight)}
-                                                          views:@{@"blur" : _pullToRefreshBlurView,
-                                                                  @"stickyParent" : _stickyParentView}];
-    
-        if (self.stickySmartDelegate && [self.stickySmartDelegate respondsToSelector:@selector(pullToRefreshDidPreActivate:)]) {
-            [self.stickySmartDelegate pullToRefreshDidPreActivate:self];
+        if (_stickyRefreshState == SmartStickyPullToRefreshStateActivated || _stickyRefreshState == SmartStickyPullToRefreshStatePreActivated) {
+            _pullToRefreshBlurView.translatesAutoresizingMaskIntoConstraints = NO;
+            [_pullToRefreshBlurView.superview addCompactConstraints:@[@"blur.top = stickyParent.bottom - 1",
+                                                                      @"blur.left = super.left - 1",
+                                                                      @"blur.right = super.right + 1",
+                                                                      @"blur.height = blurHeight"]
+                                                            metrics:@{@"blurHeight" : @(pullToRefreshBannerHeight)}
+                                                              views:@{@"blur" : _pullToRefreshBlurView,
+                                                                      @"stickyParent" : _stickyParentView}];
+        
+            if (self.stickySmartDelegate && [self.stickySmartDelegate respondsToSelector:@selector(pullToRefreshDidPreActivate:)]) {
+                [self.stickySmartDelegate pullToRefreshDidPreActivate:self];
+            }
         }
         
         /*else if (_stickyRefreshState == SmartStickyPullToRefreshStateActivated) {

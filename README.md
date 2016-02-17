@@ -7,17 +7,16 @@
 ## Usage
 
 	SmartStickyPullToRefresh *control = [[SmartStickyPullToRefresh alloc] init];
-	
-	control.stickyParentView = self.navigationController.navigationBar; // attaches to bottom using same superview (animates INTO autolayout!)
-	
-	control.stickyScrollView = self.tableView; // necessary, but only used as a pointer; setter does nothing so we must call:
-    control.stickySmartDelegate = self; // optional methods for started animating, VALUE CHANGED, stopped animating, started detecting, stopped detecting
 
-	[control beginDetectingPullToRefresh]; // adds KVO as-needed to stickyScrollView to animate SmartStickyPullToRefresh (a UIView) beneath and anchored below stickyParentView
-	
-	// [control stopDetectingPullToRefresh]; // removes KVO and any existing pull to refresh business
+    control.stickyParentView = self.navigationController.navigationBar; // attaches to bottom using same superview (animates INTO autolayout!)
 
-	control.stickySmartDelegate = self; // optional methods for started animating, VALUE CHANGED, stopped animating, started detecting, stopped detecting
+	control.stickyScrollView = self.tableView; // any UIScrollView with contentOffset for KVO -- use custom deactivate, preactivate, activate offsets
+
+    control.stickySmartDelegate = self; // a bunch of optional methods and required VALUE CHANGED
+
+	[control beginDetectingPullToRefresh]; // throw into viewDidAppear -- adds KVO as-needed to stickyScrollView to animate SmartStickyPullToRefresh (a UIView) beneath and anchored below stickyParentView
+	
+	[control stopDetectingPullToRefresh]; // throw into viewDidDisappear -- removes KVO and any existing pull to refresh business
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 

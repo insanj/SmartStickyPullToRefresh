@@ -27,6 +27,8 @@
     
     self.title = @"SmartStickyPullToRefresh";
     
+    self.tableView.rowHeight = 80.0;
+    
     [self setupSmartPhrases];
 }
 
@@ -79,7 +81,13 @@
     _smartPhrases = @[@"You can fail at what you don't want, so you might as well take a chance on doing what you love. -- Bruno Ize, NeedMonkey",
                       @"Stop looking for the magic formula. There isn't one. Nothing beats hard work, doing your own research and experimentation. -- Jason Shen, Ship Your Side Project",
                       @"Life's not so serious. -- Kevin Robinson,  Juniper Jones",
-                      @"Innovation is a feat not of intellect, but of will. -- Anne Sorenson, Bonsai"];
+                      @"Innovation is a feat not of intellect, but of will. -- Anne Sorenson, Bonsai",
+                      @"Don't fear failure, fear regret -- Michael Gelphman, The Disruption Institute",
+                      @"Accept the challenge, get the prize! -- Fauzan Helmi Sudaryanto, TemanJalan",
+                      @"If you're not facing new challenges, you're not stretching yourself enough! -- Scott Todd, Landmodo",
+                      @"Nobody cares about the middle process, they want the result. -- Gustavo Cymbal,  eStoks",
+                      @"You must learn how to crawl, then learn how to walk before trying to run a business. -- Benjamin Houri, Athletic Food",
+                      @"See more at foundermantras.com!"];
     
     NSMutableArray *generatedHeights = [NSMutableArray arrayWithCapacity:_smartPhrases.count];
     CGSize phraseBoundingSize = CGSizeMake(self.tableView.frame.size.width - 25.0, INFINITY);
@@ -124,7 +132,13 @@
 #pragma - pull to refresh
 
 - (void)pullToRefreshValueChanged:(SmartStickyPullToRefresh *)refreshControl {
+    _smartPhrases = nil;
+    [self.tableView reloadData];
+    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self setupSmartPhrases];
+        [self.tableView reloadData];
+        
         [refreshControl stopAnimating];
     });
 }
