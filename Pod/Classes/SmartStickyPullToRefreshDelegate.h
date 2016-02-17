@@ -6,14 +6,14 @@
 //
 //
 
-#ifndef SmartStickyPullToRefreshDelegate_h
-#define SmartStickyPullToRefreshDelegate_h
-
 #import <UIKit/UIKit.h>
 
 @class SmartStickyPullToRefresh;
 
 @protocol SmartStickyPullToRefreshDelegate <NSObject>
+
+@required
+- (void)pullToRefreshValueChanged:(SmartStickyPullToRefresh *)refreshControl;
 
 @optional
 - (void)pullToRefresh:(SmartStickyPullToRefresh *)refreshControl didStartDetectingFromScrollView:(UIScrollView *)scrollView;
@@ -22,12 +22,6 @@
 
 - (void)pullToRefreshDidPreActivate:(SmartStickyPullToRefresh *)refreshControl;
 
-- (void)pullToRefreshDidActivate:(SmartStickyPullToRefresh *)refreshControl;
-
-- (void)pullToRefreshValueChanged:(SmartStickyPullToRefresh *)refreshControl;
-
 - (void)pullToRefreshDidStopActivating:(SmartStickyPullToRefresh *)refreshControl;
 
 @end
-
-#endif /* SmartStickyPullToRefreshDelegate_h */

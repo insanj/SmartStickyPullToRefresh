@@ -15,6 +15,8 @@
 
 @property (strong, nonatomic) UILabel *pullToRefreshLabel;
 
+@property (strong, nonatomic) UIScrollView *pullToRefreshCurrentScrollView;
+
 @end
 
 @implementation SmartStickyPullToRefresh
@@ -26,11 +28,13 @@
         self.stickyBlurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
         self.stickyTextColor = [UIColor colorWithWhite:0.9 alpha:1.0];
         self.stickyIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
-        self.stickyPreActivationMessage = @"Pull to Refresh...";
+        [((UIActivityIndicatorView *)self.stickyIndicatorView) startAnimating];
+        self.stickyPreActivationMessage = @"Pull to Refresh";
         self.stickyActivationMessage = @"Refreshing...";
         
-        self.stickyScrollViewPreActivationOffset = CGPointMake(0, -64.0);
-        self.stickyScrollViewActivationOffset = CGPointMake(0, -100.0);
+        self.stickyScrollViewDeactivationOffset = -64.0;
+        self.stickyScrollViewPreActivationOffset = -100.0;
+        self.stickyScrollViewActivationOffset = -164.0;
     }
     
     return self;
@@ -39,13 +43,22 @@
 #pragma mark - enable / disable
 
 - (void)beginDetectingPullToRefresh {
+    _pullToRefreshCurrentScrollView = _stickyScrollView;
     [self setupPullToRefreshInParentView];
-    [self setupPullToRefreshKeyValueObserver];    
+    [self setupPullToRefreshKeyValueObserver];
+    
+    if (self.stickySmartDelegate && [self.stickySmartDelegate respondsToSelector:@selector(pullToRefresh:didStartDetectingFromScrollView:)]) {
+        [self.stickySmartDelegate pullToRefresh:self didStartDetectingFromScrollView:_pullToRefreshCurrentScrollView];
+    }
 }
 
 - (void)stopDetectingPullToRefresh {
     [self deactivatePullToRefresh];
-    [_stickyScrollView removeObserver:self forKeyPath:@"contentOffset.y"];
+    [_pullToRefreshCurrentScrollView removeObserver:self forKeyPath:@"contentOffset"];
+    
+    if (self.stickySmartDelegate && [self.stickySmartDelegate respondsToSelector:@selector(pullToRefresh:didStopDetectingFromScrollView:)]) {
+        [self.stickySmartDelegate pullToRefresh:self didStopDetectingFromScrollView:_pullToRefreshCurrentScrollView];
+    }
 }
 
 #pragma mark - setup
@@ -61,8 +74,8 @@
     _pullToRefreshBlurView = [[UIVisualEffectView alloc] initWithEffect:_stickyBlurEffect];
     _pullToRefreshBlurView.translatesAutoresizingMaskIntoConstraints = YES;
     _pullToRefreshBlurView.clipsToBounds = YES;
-    _pullToRefreshBlurView.layer.cornerRadius = 4.0;
-    _pullToRefreshBlurView.layer.borderWidth = 1.0;
+    //_pullToRefreshBlurView.layer.cornerRadius = 4.0;
+    _pullToRefreshBlurView.layer.borderWidth = 0.5;
     _pullToRefreshBlurView.layer.borderColor = _stickyTextColor.CGColor;
     
     _pullToRefreshLabel = [[UILabel alloc] init];
@@ -79,38 +92,48 @@
     _stickyIndicatorView.translatesAutoresizingMaskIntoConstraints = NO;
     [_pullToRefreshBlurView.contentView addSubview:_stickyIndicatorView];
 
-    [_pullToRefreshBlurView.contentView addCompactConstraints:@[@"indicator.left = super.left + 15",
-                                                                @"indicator.width = refreshHeight",
+    [_pullToRefreshBlurView.contentView addCompactConstraints:@[@"indicator.width = refreshHeight",
                                                                 @"indicator.height = refreshHeight",
                                                                 @"indicator.top = super.top + 10",
                                                                 @"indicator.bottom = super.bottom - 10",
+                                                                @"indicator.right = label.left - 10",
                                                                 
-                                                                @"label.left = indicator.right + 15",
-                                                                @"label.right = super.right - 15",
+                                                                @"label.width <= super.width - refreshNeededWidth",
                                                                 @"label.top = super.top + 10",
-                                                                @"label.bottom = super.bottom - 10"]
-                                                      metrics:@{@"refreshHeight" : @(pullToRefreshHeight)}
+                                                                @"label.bottom = super.bottom - 10",
+                                                                @"label.centerX = super.centerX",]
+                                                      metrics:@{@"refreshHeight" : @(pullToRefreshHeight),
+                                                                @"refreshNeededWidth" : @(pullToRefreshHeight + 30.0)}
                                                         views:@{@"indicator" : _stickyIndicatorView,
                                                                 @"label" : _pullToRefreshLabel}];
+    
+    _stickyIndicatorView.alpha = 0.0;
 }
 
 - (void)setupPullToRefreshKeyValueObserver {
-    [_stickyScrollView addObserver:self forKeyPath:@"contentOffset.y" options:NSKeyValueObservingOptionNew context:nil];
+    [_stickyScrollView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
 }
 
 #pragma mark - activate
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
-    NSLog(@"%@ -> %@", object, _stickyScrollView);
     if (object == _stickyScrollView) {
-        NSNumber *changedOffsetValue = change[NSKeyValueChangeNewKey];
-        CGFloat currentOffset = [changedOffsetValue floatValue];
+        CGPoint currentOffsetPoint = [change[NSKeyValueChangeNewKey] CGPointValue];
+        CGFloat currentOffset = currentOffsetPoint.y;
         
-        if (currentOffset < _stickyScrollViewPreActivationOffset.y) { // not activated at all
-            [self deactivatePullToRefresh];
+        NSLog(@"current %f, pre %f, act %f", currentOffset, _stickyScrollViewPreActivationOffset, _stickyScrollViewActivationOffset);
+        
+        if (currentOffset > _stickyScrollViewPreActivationOffset) { // not activated at all
+            if (currentOffset >= self.stickyScrollViewDeactivationOffset && _stickyRefreshState == SmartStickyPullToRefreshStateAlreadyRefreshedThisTime) {
+                _stickyRefreshState = SmartStickyPullToRefreshStateNotActivated;
+            }
+            
+            else if (_stickyRefreshState == SmartStickyPullToRefreshStatePreActivated) {
+                [self deactivatePullToRefresh];
+            }
         }
         
-        else if (currentOffset < _stickyScrollViewActivationOffset.y) { // surpassed pre-activation area, PRE ACTIVATE
+        else if (currentOffset > _stickyScrollViewActivationOffset) { // surpassed pre-activation area, PRE ACTIVATE
             [self preactivatePullToRefresh];
         }
         
@@ -121,40 +144,81 @@
 }
 
 - (void)preactivatePullToRefresh {
-    _stickyPullToRefreshAnimating = YES;
+    if (_stickyRefreshState != SmartStickyPullToRefreshStateNotActivated) {
+        NSLog(@"preactivatePullToRefresh: refresh state is activated or pre activated (%i)", (int)_stickyRefreshState);
+        return;
+    }
     
+    _pullToRefreshLabel.text = _stickyPreActivationMessage;
+    _stickyRefreshState = SmartStickyPullToRefreshStatePreActivated;
+    _stickyIndicatorView.alpha = 0.0;
+
+    _pullToRefreshBlurView.translatesAutoresizingMaskIntoConstraints = YES;
     CGFloat pullToRefreshBannerHeight = _stickyIndicatorView.frame.size.height + 20.0;
-    _pullToRefreshBlurView.frame = CGRectMake(0, -pullToRefreshBannerHeight, _stickyParentView.frame.size.width, pullToRefreshBannerHeight);
+    _pullToRefreshBlurView.frame = CGRectMake(-1.0, -pullToRefreshBannerHeight, _stickyParentView.frame.size.width + 2.0, pullToRefreshBannerHeight);
     
-    [_stickyParentView.superview addSubview:_pullToRefreshBlurView];
+    [_stickyParentView.superview insertSubview:_pullToRefreshBlurView belowSubview:_stickyParentView];
     
-    CGRect pullToRefreshActivatedFrame = CGRectMake(0, CGRectGetMaxY(_stickyParentView.frame), _stickyParentView.frame.size.width, pullToRefreshBannerHeight);
+    CGRect pullToRefreshActivatedFrame = CGRectMake(-1.0, CGRectGetMaxY(_stickyParentView.frame) - 1.0, _stickyParentView.frame.size.width + 2.0, pullToRefreshBannerHeight);
     
-    [UIView animateWithDuration:0.4 delay:0.0 usingSpringWithDamping:0.8 initialSpringVelocity:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    [UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:0.9 initialSpringVelocity:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         _pullToRefreshBlurView.frame = pullToRefreshActivatedFrame;
     } completion:^(BOOL finished) {
         _pullToRefreshBlurView.translatesAutoresizingMaskIntoConstraints = NO;
-        [_pullToRefreshBlurView.superview addCompactConstraints:@[@"blur.top = stickyParent.bottom",
-                                                                  @"blur.left = super.left",
-                                                                  @"blur.right = super.right",
+        [_pullToRefreshBlurView.superview addCompactConstraints:@[@"blur.top = stickyParent.bottom - 1",
+                                                                  @"blur.left = super.left - 1",
+                                                                  @"blur.right = super.right + 1",
                                                                   @"blur.height = blurHeight"]
                                                         metrics:@{@"blurHeight" : @(pullToRefreshBannerHeight)}
                                                           views:@{@"blur" : _pullToRefreshBlurView,
                                                                   @"stickyParent" : _stickyParentView}];
+    
+        if (self.stickySmartDelegate && [self.stickySmartDelegate respondsToSelector:@selector(pullToRefreshDidPreActivate:)]) {
+            [self.stickySmartDelegate pullToRefreshDidPreActivate:self];
+        }
+        
+        /*else if (_stickyRefreshState == SmartStickyPullToRefreshStateActivated) {
+            if (self.stickySmartDelegate && [self.stickySmartDelegate respondsToSelector:@selector(pullToRefreshValueChanged:)]) {
+                [self.stickySmartDelegate pullToRefreshValueChanged:self];
+            }
+        }*/
     }];
 }
 
 - (void)activatePullToRefresh {
+    if (_stickyRefreshState == SmartStickyPullToRefreshStateActivated) {
+        NSLog(@"activatePullToRefresh: needs to not already be activated");
+        return;
+    }
+    
+    else if (_stickyRefreshState == SmartStickyPullToRefreshStateAlreadyRefreshedThisTime) {
+        NSLog(@"activatePullToRefresh: already refreshed this time, go to offset 0 first");
+        return;
+    }
+    
+    [self preactivatePullToRefresh];
+    
+    _stickyRefreshState = SmartStickyPullToRefreshStateActivated;
     _pullToRefreshLabel.text = _stickyActivationMessage;
-
-    if (!_stickyPullToRefreshAnimating) {
-        [self preactivatePullToRefresh];
+    _stickyIndicatorView.alpha = 1.0;
+    
+    if (self.stickySmartDelegate && [self.stickySmartDelegate respondsToSelector:@selector(pullToRefreshValueChanged:)]) {
+        [self.stickySmartDelegate pullToRefreshValueChanged:self];
     }
 }
 
 - (void)deactivatePullToRefresh {
-    if (!_stickyPullToRefreshAnimating) {
+    if (_stickyRefreshState == SmartStickyPullToRefreshStateNotActivated) {
+        NSLog(@"activatePullToRefresh: needs to be activated or preactivated (%i)", (int)_stickyRefreshState);
         return;
+    }
+    
+    if (_stickyRefreshState == SmartStickyPullToRefreshStateActivated) {
+        _stickyRefreshState = SmartStickyPullToRefreshStateAlreadyRefreshedThisTime;
+    }
+    
+    else if (_stickyRefreshState == SmartStickyPullToRefreshStatePreActivated) {
+        _stickyRefreshState = SmartStickyPullToRefreshStateNotActivated;
     }
     
     _pullToRefreshBlurView.translatesAutoresizingMaskIntoConstraints = YES;
@@ -164,12 +228,19 @@
     
     CGRect dismissedFrame = CGRectMake(0, -pullToRefreshBannerHeight, _stickyParentView.frame.size.width, pullToRefreshBannerHeight);
 
-    [UIView animateWithDuration:0.4 delay:0.0 usingSpringWithDamping:0.8 initialSpringVelocity:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    [UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:0.9 initialSpringVelocity:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         _pullToRefreshBlurView.frame = dismissedFrame;
     } completion:^(BOOL finished) {
         [_pullToRefreshBlurView removeFromSuperview];
-         _stickyPullToRefreshAnimating = NO;
+        
+        if (self.stickySmartDelegate && [self.stickySmartDelegate respondsToSelector:@selector(pullToRefreshDidStopActivating:)]) {
+            [self.stickySmartDelegate pullToRefreshDidStopActivating:self];
+        }
     }];
+}
+
+- (void)stopAnimating {
+    [self deactivatePullToRefresh];
 }
 
 @end

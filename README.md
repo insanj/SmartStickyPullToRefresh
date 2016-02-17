@@ -11,7 +11,8 @@
 	control.stickyParentView = self.navigationController.navigationBar; // attaches to bottom using same superview (animates INTO autolayout!)
 	
 	control.stickyScrollView = self.tableView; // necessary, but only used as a pointer; setter does nothing so we must call:
-	
+    control.stickySmartDelegate = self; // optional methods for started animating, VALUE CHANGED, stopped animating, started detecting, stopped detecting
+
 	[control beginDetectingPullToRefresh]; // adds KVO as-needed to stickyScrollView to animate SmartStickyPullToRefresh (a UIView) beneath and anchored below stickyParentView
 	
 	// [control stopDetectingPullToRefresh]; // removes KVO and any existing pull to refresh business
