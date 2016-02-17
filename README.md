@@ -19,15 +19,16 @@ Smart, sticky pull to refresh control for any UIScrollView. Instead of relying o
 
     control.stickySmartDelegate = self; // a bunch of optional methods and required VALUE CHANGED
 
-	[control beginDetectingPullToRefresh]; // throw into viewDidAppear -- adds KVO as-needed to stickyScrollView to animate SmartStickyPullToRefresh (a UIView) beneath and anchored below stickyParentView
+	[control beginDetectingPullToRefresh]; // throw into viewWillAppear -- adds KVO as-needed to stickyScrollView to animate SmartStickyPullToRefresh (a UIView) beneath and anchored below stickyParentView
 	
-	[control stopDetectingPullToRefresh]; // throw into viewDidDisappear -- removes KVO and any existing pull to refresh business
+	[control stopDetectingPullToRefresh]; // throw into viewWillDisappear -- removes KVO and any existing pull to refresh business
 	
-It is highly recommended to manually adjust the activation offsets, such as the below snippet from [Submarine](http://insanj.com/submarine):
+It is highly recommended to manually adjust the activation offsets, such as in the below snippet from [Submarine](http://insanj.com/submarine):
 
 	refreshControl.stickyScrollViewDeactivationOffset = -CGRectGetMaxY(self.navigationController.navigationBar.frame) + (self.shyNavBarManager.extensionView ? -44.0 : 0);
     refreshControl.stickyScrollViewPreActivationOffset = _smartPullToRefresh.stickyScrollViewDeactivationOffset - 50.0;
     refreshControl.stickyScrollViewActivationOffset = _smartPullToRefresh.stickyScrollViewPreActivationOffset - 50.0;
+
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
