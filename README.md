@@ -6,6 +6,12 @@
 
 ## Usage
 
+Smart, sticky pull to refresh control for any UIScrollView. Instead of relying on the header view of a table or collection view, SmartStickyPullToRefresh uses a custom banner view that drops down from a user-selected `parentView` after a `parentScrollView` surpasses `stickyScrollViewActivationOffset` (use `stickyScrollViewPreActivationOffset` for pre-activation instructions and `stickyScrollViewDeactivationOffset` to hide these instructions).
+
+![](Example/Screenshots/screenie_1.png)![](Example/Screenshots/screenie_2.png)
+![](Example/Screenshots/screenie_3.png)
+
+
 	SmartStickyPullToRefresh *control = [[SmartStickyPullToRefresh alloc] init];
 
     control.stickyParentView = self.navigationController.navigationBar; // attaches to bottom using same superview (animates INTO autolayout!)
